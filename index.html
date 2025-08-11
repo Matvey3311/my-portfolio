@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Портфолио — лендинги для локального бизнеса</title>
+  <meta name="description" content="Портфолио демо‑сайтов: кафе, пиццерия и салон красоты. Быстрая сборка за 1 день, фикс‑цена в рублях." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff;
+      --bg-2:#fff;
+      --text:#161617;
+      --muted:#5b5f66;
+      --border:#e6e8ec;
+      --brand:#111827;
+      --accent:#f3f4f6;
+      --shadow:0 10px 30px rgba(2,8,23,.08);
+      --radius:16px;
+
+      /* Палитры для демо */
+      --cafe-base:#fff7ec; --cafe-brand:#d97706; --cafe-accent:#fef3c7; --cafe-border:#ead9c8;
+      --pizza-base:#fff1f1; --pizza-brand:#d62828; --pizza-accent:#ffe5e5; --pizza-border:#ffd6d6; --pizza-green:#2a9d8f;
+      --salon-base:#f7f7ff; --salon-brand:#6d28d9; --salon-accent:#ede9fe; --salon-border:#e5e7eb; --salon-rose:#ec4899;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:linear-gradient(180deg,#fafafa,#fff 30%); color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1140px;margin:0 auto;padding:0 16px}
+
+    /* NAV */
+    .navbar{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.75);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+    .logo{width:28px;height:28px;border-radius:10px;background:conic-gradient(from 0deg,#8b5cf6,#ef4444,#f59e0b,#10b981,#8b5cf6)}
+    .nav-links{display:flex;gap:22px;color:var(--muted);font-weight:600}
+    .btn{border:1px solid var(--border);background:var(--bg-2);border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;box-shadow:var(--shadow)}
+    .btn.primary{background:#111827;color:#fff;border-color:#111827}
+
+    /* HERO */
+    .hero{padding:48px 0 18px}
+    h1{font-size:clamp(28px,4.5vw,46px);line-height:1.1;margin:0}
+    .lead{margin:12px 0 0;color:var(--muted);font-size:18px}
+    .tag{display:inline-flex;gap:8px;align-items:center;background:var(--accent);border:1px solid var(--border);border-radius:999px;padding:6px 10px;font-weight:700}
+
+    /* PORTFOLIO GRID */
+    .section{padding:48px 0}
+    .section h2{font-size:clamp(24px,3.5vw,34px);margin:0 0 8px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .card .thumb{aspect-ratio:16/9;border-bottom:1px solid var(--border);border-top-left-radius:var(--radius);border-top-right-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-weight:800}
+    .card .body{padding:16px;display:flex;flex-direction:column;gap:10px}
+
+    /* DEMO SECTIONS (3 блока ниже) */
+    .demo{padding:42px 0;border-top:1px solid var(--border)}
+    .demo .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    .chip{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid rgba(0,0,0,.06);font-size:12px}
+    .list{margin:10px 0 0;padding:0 0 0 18px;color:#374151}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .cards{grid-template-columns:1fr 1fr}
+      .demo .wrap{grid-template-columns:1fr}
+    }
+    @media (max-width: 680px){
+      .cards{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <div class="brand"><span class="logo" aria-hidden="true"></span> <span>Портфолио</span></div>
+      <div class="nav-links">
+        <a href="#portfolio">Работы</a>
+        <a href="#contact">Контакты</a>
+      </div>
+      <a class="btn primary" href="#contact">Заказать сайт</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <span class="tag">🚀 Лендинги для локального бизнеса (Воронеж)</span>
+      <h1>Сайты за 1 день: кафе, пиццерии и салоны красоты</h1>
+      <p class="lead">Фикс‑цены в рублях, настройка домена/аналитики, кнопка WhatsApp и Telegram. Ниже — 3 живых демо, которые можно развернуть под вашу точку.</p>
+    </div>
+  </header>
+
+  <!-- PORTFOLIO GRID -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2>Готовые демо</h2>
+      <div class="cards">
+        <!-- CAFE CARD -->
+        <article class="card">
+          <div class="thumb" style="background:radial-gradient(circle at 30% 20%, #fff1c7, transparent 60%), linear-gradient(135deg, var(--cafe-accent), #fde68a); color:#7c2d12">КАФЕ</div>
+          <div class="body">
+            <h3 style="margin:0">Пышечная у дома</h3>
+            <p class="lead" style="font-size:14px">Меню, предзаказ, галерея и отзывы. Светлая/тёмная тема.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn" href="#demo-cafe">Открыть демо</a>
+            </div>
+          </div>
+        </article>
+        <!-- PIZZA CARD -->
+        <article class="card">
+          <div class="thumb" style="background:radial-gradient(circle at 30% 20%, #ffd7d7, transparent 60%), linear-gradient(135deg, var(--pizza-accent), #ffdede); color:#7f1d1d">ПИЦЦЕРИЯ</div>
+          <div class="body">
+            <h3 style="margin:0">Gusto Pizza</h3>
+            <p class="lead" style="font-size:14px">Пиццы 30/35 см, комбо и доставка через WhatsApp.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn" href="#demo-pizza">Открыть демо</a>
+            </div>
+          </div>
+        </article>
+        <!-- SALON CARD -->
+        <article class="card">
+          <div class="thumb" style="background:radial-gradient(circle at 30% 20%, #ede9fe, transparent 60%), linear-gradient(135deg, var(--salon-accent), #fdf2f8); color:#4c1d95">САЛОН</div>
+          <div class="body">
+            <h3 style="margin:0">Салон «Лайм»</h3>
+            <p class="lead" style="font-size:14px">Стрижки/укладки, маникюр, запись в мессенджер.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn" href="#demo-salon">Открыть демо</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO: CAFE -->
+  <section id="demo-cafe" class="demo" style="background:var(--cafe-base); border-color:var(--cafe-border)">
+    <div class="container">
+      <div class="wrap">
+        <div>
+          <span class="chip" style="background:var(--cafe-accent); border-color:var(--cafe-border)">🍩 Кафе / Пышечная</span>
+          <h2 style="margin:8px 0 6px; color:#7c2d12">Пышечная у дома</h2>
+          <p class="lead">Свежие пышки, кофе и лимонады. Быстрый предзаказ и уютная галерея.</p>
+          <ul class="list">
+            <li>Меню с ценами и «хитами дня»</li>
+            <li>Кнопка WhatsApp/Telegram для предзаказа</li>
+            <li>Отзывы гостей и часы работы</li>
+          </ul>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+            <a class="btn" href="#contact">Хочу такой же</a>
+            <a class="btn" href="#portfolio">Назад</a>
+          </div>
+        </div>
+        <div>
+          <div style="background:#fff;border:1px solid var(--cafe-border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden">
+            <div style="padding:14px 16px;border-bottom:1px solid var(--cafe-border);display:flex;justify-content:space-between;align-items:center">
+              <strong style="color:#7c2d12">Меню</strong>
+              <span class="chip" style="background:var(--cafe-accent);border-color:var(--cafe-border)">пример</span>
+            </div>
+            <div style="padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <div style="display:flex;gap:10px"><div style="width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#fcd34d,#f59e0b)"></div><div><div>Классическая пышка</div><div style="color:#7c2d12;font-weight:800">39 ₽</div></div></div>
+              <div style="display:flex;gap:10px"><div style="width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#fde68a,#f59e0b)"></div><div><div>Пышка с пудрой</div><div style="color:#7c2d12;font-weight:800">45 ₽</div></div></div>
+              <div style="display:flex;gap:10px"><div style="width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#fecaca,#fde68a)"></div><div><div>С корицей</div><div style="color:#7c2d12;font-weight:800">49 ₽</div></div></div>
+              <div style="display:flex;gap:10px"><div style="width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#fde68a,#fecaca)"></div><div><div>С вареньем</div><div style="color:#7c2d12;font-weight:800">55 ₽</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <div style="aspect-ratio:4/3;border-radius:14px;border:1px solid var(--cafe-border);background-image:url('donut1.jpg');background-size:cover;background-position:center"></div>
+        <div style="aspect-ratio:4/3;border-radius:14px;border:1px solid var(--cafe-border);background-image:url('donut2.jpg');background-size:cover;background-position:center"></div>
+        <div style="aspect-ratio:4/3;border-radius:14px;border:1px solid var(--cafe-border);background-image:url('donut3.jpg');background-size:cover;background-position:center"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO: PIZZERIA -->
+  <section id="demo-pizza" class="demo" style="background:var(--pizza-base); border-color:var(--pizza-border)">
+    <div class="container">
+      <div class="wrap">
+        <div>
+          <span class="chip" style="background:var(--pizza-accent); border-color:var(--pizza-border)">🍕 Пиццерия</span>
+          <h2 style="margin:8px 0 6px; color:#7f1d1d">Gusto Pizza — печь на тонком тесте</h2>
+          <p class="lead">Классика и фирменные рецепты. Доставка по району через WhatsApp.</p>
+          <ul class="list">
+            <li>Пиццы 30/35 см, наборы «2+кола»</li>
+            <li>Быстрые кнопки предзаказа в WhatsApp</li>
+            <li>Блок «Комбо недели» и отзывы</li>
+          </ul>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+            <a class="btn" href="#contact">Хочу такой же</a>
+            <a class="btn" href="#portfolio">Назад</a>
+          </div>
+        </div>
+        <div>
+          <div style="background:#fff;border:1px solid var(--pizza-border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden">
+            <div style="padding:14px 16px;border-bottom:1px solid var(--pizza-border);display:flex;justify-content:space-between;align-items:center">
+              <strong style="color:#7f1d1d">Топ‑пиццы</strong>
+              <span class="chip" style="background:var(--pizza-accent);border-color:var(--pizza-border)">пример</span>
+            </div>
+            <div style="padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <div style="display:flex;gap:10px"><div style="width:56px;height:56px;border-radius:12px;background:radial-gradient(circle at 40% 40%, #ffedd5,#f87171)"></div><div><div>Маргарита 30 см</div><div style="color:#991b1b;font-weight:800">349 ₽</div></div></div>
+              <div style="display:flex;gap:10px"><div style="width:56px;height:56px;border-radius:12px;background:radial-gradient(circle at 40% 40%, #ffd7d7,#ef4444)"></div><div><div>Пепперони 35 см</div><div style="color:#991b1b;font-weight:800">499 ₽</div></div></div>
+              <div style="display:flex;gap:10px"><div style="width:56px;height:56px;border-radius:12px;background:radial-gradient(circle at 40% 40%, #ffe5e5,#fb7185)"></div><div><div>4 сыра 30 см</div><div style="color:#991b1b;font-weight:800">459 ₽</div></div></div>
+              <div style="display:flex;gap:10px"><div style="width:56px;height:56px;border-radius:12px;background:radial-gradient(circle at 40% 40%, #ffd7d7,#ef4444)"></div><div><div>Ветчина‑грибы 35 см</div><div style="color:#991b1b;font-weight:800">529 ₽</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <div style="aspect-ratio:4/3;border-radius:14px;border:1px solid var(--pizza-border);background-image:url('pizza1.jpg');background-size:cover;background-position:center"></div>
+        <div style="aspect-ratio:4/3;border-radius:14px;border:1px solid var(--pizza-border);background-image:url('pizza2.jpg');background-size:cover;background-position:center"></div>
+        <div style="aspect-ratio:4/3;border-radius:14px;border:1px solid var(--pizza-border);background-image:url('pizza3.jpg');background-size:cover;background-position:center"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO: SALON -->
+  <section id="demo-salon" class="demo" style="background:var(--salon-base); border-color:var(--salon-border)">
+    <div class="container">
+      <div class="wrap">
+        <div>
+          <span class="chip" style="background:var(--salon-accent); border-color:var(--salon-border)">💇 Салон красоты</span>
+          <h2 style="margin:8px 0 6px; color:#4c1d95">Салон «Лайм» — стрижки и маникюр</h2>
+          <p class="lead">Чёткое расписание, прайс по услугам и запись в мессенджер.</p>
+          <ul class="list">
+            <li>Прайс‑лист с пакетами «Стрижка + уход»</li>
+            <li>Блок мастеров и фото‑галерея</li>
+            <li>Запись: WhatsApp/Telegram</li>
+          </ul>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+            <a class="btn" href="#contact">Хочу такой же</a>
+            <a class="btn" href="#portfolio">Назад</a>
+          </div>
+        </div>
+        <div>
+          <div style="background:#fff;border:1px solid var(--salon-border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden">
+            <div style="padding:14px 16px;border-bottom:1px solid var(--salon-border);display:flex;justify-content:space-between;align-items:center">
+              <strong style="color:#4c1d95">Прайс</strong>
+              <span class="chip" style="background:var(--salon-accent);border-color:var(--salon-border)">пример</span>
+            </div>
+            <div style="padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <div style="display:flex;justify-content:space-between;gap:8px"><span>Стрижка женская</span><strong style="color:#4c1d95">900 ₽</strong></div>
+              <div style="display:flex;justify-content:space-between;gap:8px"><span>Стрижка мужская</span><strong style="color:#4c1d95">700 ₽</strong></div>
+              <div style="display:flex;justify-content:space-between;gap:8px"><span>Укладка</span><strong style="color:#4c1d95">600 ₽</strong></div>
+              <div style="display:flex;justify-content:space-between;gap:8px"><span>Маникюр классический</span><strong style="color:#4c1d95">1 100 ₽</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+        <div style="aspect-ratio:4/3;border-radius:14px;border:1px solid var(--salon-border);background-image:url('salon1.jpg');background-size:cover;background-position:center"></div>
+        <div style="aspect-ratio:4/3;border-radius:14px;border:1px solid var(--salon-border);background-image:url('salon2.jpg');background-size:cover;background-position:center"></div>
+        <div style="aspect-ratio:4/3;border-radius:14px;border:1px solid var(--salon-border);background-image:url('salon3.jpg');background-size:cover;background-position:center"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section" style="border-top:1px solid var(--border)">
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div>
+        <h2>Контакты</h2>
+        <p class="lead">Пишете название, адрес, телефон и 6–10 фото — собираю демо сегодня, запускаем завтра.</p>
+        <div style="margin-top:12px;display:grid;gap:8px;color:#394150">
+          <div>📍 Воронежская область, Ямное</div>
+          <div>✉️ <a href="mailto:rmatvey33@mail.ru" style="opacity:.9">rmatvey33@mail.ru</a></div>
+          <div>💬 WhatsApp: <a href="https://wa.me/79529542255?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BB%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3%20%D0%B4%D0%BB%D1%8F%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0." target="_blank" rel="noopener">написать</a></div>
+          <div>💬 Telegram: <a href="https://t.me/matvik4" target="_blank" rel="noopener">@matvik4</a></div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <a class="btn" href="https://wa.me/79529542255?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BB%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3%20%D0%B4%D0%BB%D1%8F%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0." target="_blank" rel="noopener">Написать в WhatsApp</a>
+          <a class="btn" href="https://t.me/matvik4" target="_blank" rel="noopener">Написать в Telegram</a>
+        </div>
+      </div>
+      <div class="card" style="overflow:hidden;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow)">
+        <div class="body" style="padding:16px">
+          <h3 style="margin:0 0 8px">Напишите мне</h3>
+          <form id="contactForm">
+            <input class="btn" style="width:100%;border-radius:12px;margin:6px 0;border:1px solid var(--border);background:#fff;color:#111" placeholder="Ваше имя" required />
+            <input class="btn" style="width:100%;border-radius:12px;margin:6px 0;border:1px solid var(--border);background:#fff;color:#111" placeholder="Телефон или email" required />
+            <textarea class="btn" style="width:100%;border-radius:12px;margin:6px 0;height:110px;border:1px solid var(--border);background:#fff;color:#111" placeholder="Коротко о задаче (ниша, адрес, сроки)" required></textarea>
+            <button class="btn primary" type="submit" style="width:100%">Получить демо</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid var(--border);padding:18px 0;color:#69707a">
+    <div class="container" style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">
+      <div>© <span id="year"></span> Портфолио — локальные лендинги</div>
+      <div style="display:flex;gap:14px">
+        <a href="#portfolio">Работы</a>
+        <a href="#contact">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        alert('Спасибо! Я свяжусь с вами для демо.');
+        this.reset();
+      });
+    }
+  </script>
+</body>
+</html>
