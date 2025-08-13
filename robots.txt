@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://matvey3311.github.io/my-portfolio/sitemap.xml
+Sitemap: https://matvey-portfolio.netlify.app/sitemap.xml
